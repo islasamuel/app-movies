@@ -1,6 +1,7 @@
 import { Time } from "@angular/common";
 
 export interface IThumbnail {
+    id:string;
     title: string;
     description:string;
     rating:number;

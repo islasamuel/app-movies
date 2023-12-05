@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThumbnailComponent } from './thumbnail/thumbnail.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { OperationComponent } from './operation/operation.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
 @NgModule({
   declarations: [
-    ThumbnailComponent
+    ThumbnailComponent,
+    OperationComponent
   ],
   imports: [
     CommonModule,
+    NgbModule,
     NgCircleProgressModule.forRoot({
       backgroundColor: "#000",
       titleFontSize: "12",
@@ -28,7 +32,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     })
   ],
   exports: [
-    ThumbnailComponent
+    ThumbnailComponent,
+    OperationComponent
   ]
 })
 export class ComponentsModule { }

@@ -1,0 +1,84 @@
+<div ngbAccordion>
+    <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+            <button ngbAccordionButton> <strong>Sort</strong></button>
+        </h2>
+        <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+                <ng-template>
+                    Sort results by
+                    <select class="form-select">
+                        <option *ngFor="let item of sortItems" [value]="item.value">{{item.description}}</option>
+                    </select>
+
+                    <select class="form-select mt-1">
+                        <option *ngFor="let item of sortOptions" [value]="item.value">{{item.description}}</option>
+                    </select>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div ngbAccordion class="mt-3">
+    <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+            <button ngbAccordionButton> <strong>Filter</strong></button>
+        </h2>
+        <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+                <ng-template>
+                    <div class="col-12">
+                        Genres
+
+                    </div>
+                    <div class="row g-3 align-items-center">
+
+                        <div class="col-auto">
+                            <input type="checkbox" class="btn-check" id="btn-check-action"
+                                (change)="change_genre('action',$event.target)" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btn-check-action">Action</label><br>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="checkbox" class="btn-check" id="btn-check-sci-fi" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btn-check-sci-fi">Sci-Fi</label><br>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="checkbox" class="btn-check" id="btn-check-animation" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btn-check-animation">Animation</label><br>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="checkbox" class="btn-check" id="btn-check-adventure" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btn-check-adventure">Adventure</label><br>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="checkbox" class="btn-check" id="btn-check-comedy" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btn-check-comedy">Comedy</label><br>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="checkbox" class="btn-check" id="btn-check-crime" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btn-check-crime">Crime</label><br>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="checkbox" class="btn-check" id="btn-check-drama" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btn-check-drama">Drama</label><br>
+                        </div>
+                    </div>
+
+
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3 text-center">
+    <button class="btn btn-primary w-100">Search</button>
+</div>
