@@ -1,26 +1,29 @@
 <div class="row">
-    <div class="col-md-12">
+  <div class="col-md-12">
 
-        Popular movies
-    </div>
+    <h3 class="title" >
+      Popular movies
+    </h3>
+
+  </div>
 </div>
 <div class="row">
-    <div class="col-md-2">
-        <div ngbAccordion>
-            <div ngbAccordionItem>
-              <h2 ngbAccordionHeader>
-                <button ngbAccordionButton>First</button>
-              </h2>
-              <div ngbAccordionCollapse>
-                <div ngbAccordionBody>
-                  <ng-template>Content for the first item</ng-template>
-                </div>
-              </div>
-            </div>
+  <div class="col-md-3">
+    <div ngbAccordion>
+      <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>First</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>Content for the first item</ng-template>
           </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-10">
-        <app-thumbnail></app-thumbnail>
-    </div>
+  </div>
+  <div class="col-md-9">
+    <app-thumbnail [lstThumbnail]="lstThumbnail"></app-thumbnail>
+  </div>
 
 </div>
